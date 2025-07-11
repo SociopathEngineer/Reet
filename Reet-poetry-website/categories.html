@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Reet Poetry</title>
+    <!-- Bitcount Grid Double Font -->
+    <style>
+        /* Bitcount Grid Double Font Import */
+        @import url('https://fonts.cdnfonts.com/css/bitcount-grid-double');
+        
+        /* Font definitions */
+        body {
+            font-family: 'Bitcount Grid Double', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .nav-brand, .hero-title, .section-title, .poem-title, .book-title, .toggle-title {
+            font-family: 'Bitcount Grid Double', 'Playfair Display', 'Georgia', serif !important;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .categories-hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+        
+        .category-btn.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .category-btn[data-theme="love"] {
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            color: white;
+        }
+        
+        .category-btn[data-theme="grief"] {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+        }
+        
+        .category-btn[data-theme="hope"] {
+            background: linear-gradient(135deg, #f1c40f, #f39c12);
+            color: white;
+        }
+        
+        .category-btn[data-theme="nature"] {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+        }
+        
+        .category-btn[data-theme="spiritual"] {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+        }
+        
+        .category-btn[data-theme="experimental"] {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+            color: white;
+        }
+        
+        .poems-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .poem-card[data-theme="love"] {
+            border-left: 4px solid #ff6b9d;
+        }
+        
+        .poem-card[data-theme="grief"] {
+            border-left: 4px solid #2c3e50;
+        }
+        
+        .poem-card[data-theme="hope"] {
+            border-left: 4px solid #f1c40f;
+        }
+        
+        .poem-card[data-theme="nature"] {
+            border-left: 4px solid #27ae60;
+        }
+        
+        .poem-card[data-theme="spiritual"] {
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .poem-card[data-theme="experimental"] {
+            border-left: 4px solid #95a5a6;
+        }
+        
+        .poem-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Reet</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html" class="active">Categories</a></li>
+            <li><a href="write.html">Write</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Categories Hero -->
+    <section class="categories-hero">
+        <h1 class="section-title">Poetry Categories</h1>
+        <p class="hero-description">
+            Explore poems by theme and emotion. Each category represents a different facet of the human experience.
+        </p>
+    </section>
+
+    <!-- Category Filters -->
+    <div class="category-filters">
+        <button class="category-btn active" data-theme="all">All Poems</button>
+        <button class="category-btn" data-theme="love">Love</button>
+        <button class="category-btn" data-theme="grief">Grief</button>
+        <button class="category-btn" data-theme="hope">Hope</button>
+        <button class="category-btn" data-theme="nature">Nature</button>
+        <button class="category-btn" data-theme="spiritual">Spiritual</button>
+        <button class="category-btn" data-theme="experimental">Experimental</button>
+    </div>
+
+    <!-- Poems Container -->
+    <div class="poems-container">
+        <div class="poems-grid">
+            <!-- Love Poems -->
+            <article class="poem-card" data-theme="love">
+                <h3 class="poem-title">Whispers of the Heart</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>In the quiet of night, when stars align,</p>
+                    <p>Your love whispers through the wind.</p>
+                    <p>Like rivers flowing to the sea,</p>
+                    <p>My heart finds its way to you.</p>
+                </div>
+                <div class="poem-theme">Love</div>
+            </article>
+
+            <article class="poem-card" data-theme="love">
+                <h3 class="poem-title">Eternal Flame</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>Your eyes hold galaxies untold,</p>
+                    <p>Your smile lights up my world.</p>
+                    <p>In your embrace, I find my home,</p>
+                    <p>Forever in your love, I'm whole.</p>
+                </div>
+                <div class="poem-theme">Love</div>
+            </article>
+
+            <!-- Grief Poems -->
+            <article class="poem-card" data-theme="grief">
+                <h3 class="poem-title">Tears Like Rain</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>Grief sits heavy on my chest,</p>
+                    <p>Like clouds before the storm.</p>
+                    <p>Each tear a memory,</p>
+                    <p>Each sob a story untold.</p>
+                </div>
+                <div class="poem-theme">Grief</div>
+            </article>
+
+            <article class="poem-card" data-theme="grief">
+                <h3 class="poem-title">Empty Chair</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>Your chair sits empty now,</p>
+                    <p>But echoes of your laughter remain.</p>
+                    <p>In the silence, I hear your voice,</p>
+                    <p>Calling me through the pain.</p>
+                </div>
+                <div class="poem-theme">Grief</div>
+            </article>
+
+            <!-- Hope Poems -->
+            <article class="poem-card" data-theme="hope">
+                <h3 class="poem-title">Dawn's Promise</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>After the darkest night,</p>
+                    <p>Comes the promise of dawn.</p>
+                    <p>Hope springs eternal,</p>
+                    <p>Like flowers after rain.</p>
+                </div>
+                <div class="poem-theme">Hope</div>
+            </article>
+
+            <article class="poem-card" data-theme="hope">
+                <h3 class="poem-title">New Beginnings</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>With each sunrise comes a chance,</p>
+                    <p>To start again, to dance.</p>
+                    <p>Hope whispers in the morning light,</p>
+                    <p>Everything will be alright.</p>
+                </div>
+                <div class="poem-theme">Hope</div>
+            </article>
+
+            <!-- Nature Poems -->
+            <article class="poem-card" data-theme="nature">
+                <h3 class="poem-title">Forest Whispers</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>Ancient trees tell stories old,</p>
+                    <p>Of seasons changing, stories told.</p>
+                    <p>In their branches, wisdom grows,</p>
+                    <p>Nature's rhythm, life's prose.</p>
+                </div>
+                <div class="poem-theme">Nature</div>
+            </article>
+
+            <article class="poem-card" data-theme="nature">
+                <h3 class="poem-title">Ocean's Call</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>Waves crash against the shore,</p>
+                    <p>Eternal rhythm, forevermore.</p>
+                    <p>In the ocean's vast embrace,</p>
+                    <p>I find my soul's sacred space.</p>
+                </div>
+                <div class="poem-theme">Nature</div>
+            </article>
+
+            <!-- Spiritual Poems -->
+            <article class="poem-card" data-theme="spiritual">
+                <h3 class="poem-title">Divine Light</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>In the depths of meditation,</p>
+                    <p>I find divine revelation.</p>
+                    <p>Light flows through my being,</p>
+                    <p>Spirit soaring, soul seeing.</p>
+                </div>
+                <div class="poem-theme">Spiritual</div>
+            </article>
+
+            <article class="poem-card" data-theme="spiritual">
+                <h3 class="poem-title">Sacred Silence</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>In the silence of the soul,</p>
+                    <p>I hear the universe's call.</p>
+                    <p>Sacred whispers in the night,</p>
+                    <p>Guiding me to inner light.</p>
+                </div>
+                <div class="poem-theme">Spiritual</div>
+            </article>
+
+            <!-- Experimental Poems -->
+            <article class="poem-card" data-theme="experimental">
+                <h3 class="poem-title">Digital Dreams</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>0s and 1s dance in code,</p>
+                    <p>Digital dreams on the road.</p>
+                    <p>Technology meets poetry,</p>
+                    <p>Creating new reality.</p>
+                </div>
+                <div class="poem-theme">Experimental</div>
+            </article>
+
+            <article class="poem-card" data-theme="experimental">
+                <h3 class="poem-title">Fragmented Thoughts</h3>
+                <p class="poem-author">by Anonymous</p>
+                <div class="poem-content">
+                    <p>Thoughts scatter like stardust,</p>
+                    <p>Fragments of a broken trust.</p>
+                    <p>In chaos, beauty finds its way,</p>
+                    <p>Through the fragments of today.</p>
+                </div>
+                <div class="poem-theme">Experimental</div>
+            </article>
+        </div>
+    </div>
+
+    <!-- River Animation -->
+    <div class="river-container">
+        <svg class="river" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="riverGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#e6f3ff;stop-opacity:0.8" />
+                    <stop offset="50%" style="stop-color:#b3d9ff;stop-opacity:0.6" />
+                    <stop offset="100%" style="stop-color:#e6f3ff;stop-opacity:0.8" />
+                </linearGradient>
+            </defs>
+            <path class="river-path" d="M0,100 Q300,80 600,100 T1200,100" fill="none" stroke="url(#riverGradient)" stroke-width="3"/>
+            <path class="river-path" d="M0,110 Q300,90 600,110 T1200,110" fill="none" stroke="url(#riverGradient)" stroke-width="2"/>
+            <path class="river-path" d="M0,120 Q300,100 600,120 T1200,120" fill="none" stroke="url(#riverGradient)" stroke-width="1.5"/>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reet</h3>
+                <p>Where Every Tear Becomes a Verse</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="write.html">Write</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#love">Love</a></li>
+                    <li><a href="#grief">Grief</a></li>
+                    <li><a href="#hope">Hope</a></li>
+                    <li><a href="#nature">Nature</a></li>
+                    <li><a href="#spiritual">Spiritual</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Reet Poetry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const poemCards = document.querySelectorAll('.poem-card');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const selectedTheme = this.getAttribute('data-theme');
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter poems
+                    poemCards.forEach(card => {
+                        if (selectedTheme === 'all' || card.getAttribute('data-theme') === selectedTheme) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

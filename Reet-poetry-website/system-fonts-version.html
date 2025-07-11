@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reet – Where Every Tear Becomes a Verse (System Fonts)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Bitcount Grid Double Font Import */
+        @import url('https://fonts.cdnfonts.com/css/bitcount-grid-double');
+        
+        /* Font definitions */
+        body {
+            font-family: 'Bitcount Grid Double', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .nav-brand, .hero-title, .section-title, .poem-title, .book-title, .toggle-title {
+            font-family: 'Bitcount Grid Double', 'Playfair Display', 'Georgia', serif !important;
+        }
+        
+        .font-test {
+            font-family: 'Bitcount Grid Double', 'Playfair Display', serif !important;
+            font-size: 2rem;
+            color: #667eea;
+            text-align: center;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Toggle Animation Overlay -->
+    <div class="toggle-overlay" id="toggleOverlay">
+        <div class="toggle-content">
+            <div class="toggle-title">Reet</div>
+            <div class="toggle-subtitle">Where Every Tear Becomes a Verse</div>
+            <div class="toggle-loading"></div>
+        </div>
+    </div>
+
+    <!-- Book Opening Animation -->
+    <div class="book-opening" id="bookOpening">
+        <div class="book-cover">
+            <div class="book-title">Reet</div>
+            <div class="book-subtitle">Where Every Tear Becomes a Verse</div>
+        </div>
+        <div class="book-pages">
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">Reet</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="write.html">Write</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <div class="font-test">Font Test: Bitcount Grid Double</div>
+                <h1 class="hero-title">Reet</h1>
+                <p class="hero-subtitle">Where Every Tear Becomes a Verse</p>
+                <p class="hero-description">
+                    A sanctuary for the soul's deepest expressions, where emotions flow like rivers 
+                    and every word carries the weight of human experience.
+                </p>
+                <a href="categories.html" class="cta-button">Explore Poems</a>
+            </div>
+        </header>
+
+        <!-- Featured Poems Section -->
+        <section class="featured-poems">
+            <h2 class="section-title">Featured Poems</h2>
+            <div class="poems-grid">
+                <article class="poem-card" data-theme="love">
+                    <h3 class="poem-title">Whispers of the Heart</h3>
+                    <p class="poem-author">by Anonymous</p>
+                    <div class="poem-content">
+                        <p>In the quiet of night, when stars align,</p>
+                        <p>Your love whispers through the wind.</p>
+                        <p>Like rivers flowing to the sea,</p>
+                        <p>My heart finds its way to you.</p>
+                    </div>
+                    <div class="poem-theme">Love</div>
+                </article>
+
+                <article class="poem-card" data-theme="grief">
+                    <h3 class="poem-title">Tears Like Rain</h3>
+                    <p class="poem-author">by Anonymous</p>
+                    <div class="poem-content">
+                        <p>Grief sits heavy on my chest,</p>
+                        <p>Like clouds before the storm.</p>
+                        <p>Each tear a memory,</p>
+                        <p>Each sob a story untold.</p>
+                    </div>
+                    <div class="poem-theme">Grief</div>
+                </article>
+
+                <article class="poem-card" data-theme="hope">
+                    <h3 class="poem-title">Dawn's Promise</h3>
+                    <p class="poem-author">by Anonymous</p>
+                    <div class="poem-content">
+                        <p>After the darkest night,</p>
+                        <p>Comes the promise of dawn.</p>
+                        <p>Hope springs eternal,</p>
+                        <p>Like flowers after rain.</p>
+                    </div>
+                    <div class="poem-theme">Hope</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- River Animation -->
+        <div class="river-container">
+            <svg class="river" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="riverGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#e6f3ff;stop-opacity:0.8" />
+                        <stop offset="50%" style="stop-color:#b3d9ff;stop-opacity:0.6" />
+                        <stop offset="100%" style="stop-color:#e6f3ff;stop-opacity:0.8" />
+                    </linearGradient>
+                </defs>
+                <path class="river-path" d="M0,100 Q300,80 600,100 T1200,100" fill="none" stroke="url(#riverGradient)" stroke-width="3"/>
+                <path class="river-path" d="M0,110 Q300,90 600,110 T1200,110" fill="none" stroke="url(#riverGradient)" stroke-width="2"/>
+                <path class="river-path" d="M0,120 Q300,100 600,120 T1200,120" fill="none" stroke="url(#riverGradient)" stroke-width="1.5"/>
+            </svg>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Reet</h3>
+                    <p>Where Every Tear Becomes a Verse</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="write.html">Write</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html#love">Love</a></li>
+                        <li><a href="categories.html#grief">Grief</a></li>
+                        <li><a href="categories.html#hope">Hope</a></li>
+                        <li><a href="categories.html#nature">Nature</a></li>
+                        <li><a href="categories.html#spiritual">Spiritual</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Reet Poetry. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

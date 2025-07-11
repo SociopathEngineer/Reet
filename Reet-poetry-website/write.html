@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Poetry - Reet</title>
+    <!-- Bitcount Grid Double Font -->
+    <style>
+        /* Bitcount Grid Double Font Import */
+        @import url('https://fonts.cdnfonts.com/css/bitcount-grid-double');
+        
+        /* Font definitions */
+        body {
+            font-family: 'Bitcount Grid Double', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .nav-brand, .hero-title, .section-title, .poem-title, .book-title, .toggle-title {
+            font-family: 'Bitcount Grid Double', 'Playfair Display', 'Georgia', serif !important;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .write-hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .write-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .poem-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-group textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submitted-poems {
+            margin-top: 3rem;
+        }
+        
+        .submitted-poems h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .no-poems {
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Reet</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="write.html" class="active">Write</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Write Hero -->
+    <section class="write-hero">
+        <h1 class="section-title">Write Your Poetry</h1>
+        <p class="hero-description">
+            Share your emotions, thoughts, and experiences through the art of poetry. 
+            Let your words flow like rivers and touch the hearts of others.
+        </p>
+    </section>
+
+    <!-- Write Container -->
+    <div class="write-container">
+        <!-- Poem Form -->
+        <form class="poem-form" id="poemForm">
+            <div class="form-group">
+                <label for="poemTitle">Poem Title *</label>
+                <input type="text" id="poemTitle" name="poemTitle" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="authorName">Author Name (Optional)</label>
+                <input type="text" id="authorName" name="authorName" placeholder="Anonymous">
+            </div>
+            
+            <div class="form-group">
+                <label for="poemTheme">Theme *</label>
+                <select id="poemTheme" name="poemTheme" required>
+                    <option value="">Select a theme</option>
+                    <option value="love">Love</option>
+                    <option value="grief">Grief</option>
+                    <option value="hope">Hope</option>
+                    <option value="nature">Nature</option>
+                    <option value="spiritual">Spiritual</option>
+                    <option value="experimental">Experimental</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="poemBody">Poem Body *</label>
+                <textarea id="poemBody" name="poemBody" placeholder="Write your poem here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Poem</button>
+        </form>
+
+        <!-- Submitted Poems -->
+        <div class="submitted-poems">
+            <h2>Your Submitted Poems</h2>
+            <div id="poemsList">
+                <div class="no-poems">No poems submitted yet. Be the first to share your poetry!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- River Animation -->
+    <div class="river-container">
+        <svg class="river" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="riverGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#e6f3ff;stop-opacity:0.8" />
+                    <stop offset="50%" style="stop-color:#b3d9ff;stop-opacity:0.6" />
+                    <stop offset="100%" style="stop-color:#e6f3ff;stop-opacity:0.8" />
+                </linearGradient>
+            </defs>
+            <path class="river-path" d="M0,100 Q300,80 600,100 T1200,100" fill="none" stroke="url(#riverGradient)" stroke-width="3"/>
+            <path class="river-path" d="M0,110 Q300,90 600,110 T1200,110" fill="none" stroke="url(#riverGradient)" stroke-width="2"/>
+            <path class="river-path" d="M0,120 Q300,100 600,120 T1200,120" fill="none" stroke="url(#riverGradient)" stroke-width="1.5"/>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Reet</h3>
+                <p>Where Every Tear Becomes a Verse</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="write.html">Write</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="categories.html#love">Love</a></li>
+                    <li><a href="categories.html#grief">Grief</a></li>
+                    <li><a href="categories.html#hope">Hope</a></li>
+                    <li><a href="categories.html#nature">Nature</a></li>
+                    <li><a href="categories.html#spiritual">Spiritual</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Reet Poetry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const poemForm = document.getElementById('poemForm');
+            const poemsList = document.getElementById('poemsList');
+            
+            // Load existing poems from localStorage
+            loadPoems();
+            
+            poemForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(poemForm);
+                const poemData = {
+                    title: formData.get('poemTitle'),
+                    author: formData.get('authorName') || 'Anonymous',
+                    theme: formData.get('poemTheme'),
+                    body: formData.get('poemBody'),
+                    date: new Date().toLocaleDateString()
+                };
+                
+                // Save poem to localStorage
+                savePoem(poemData);
+                
+                // Display the poem
+                displayPoem(poemData);
+                
+                // Reset form
+                poemForm.reset();
+                
+                // Show success message
+                alert('Poem submitted successfully!');
+            });
+            
+            function savePoem(poemData) {
+                let poems = JSON.parse(localStorage.getItem('reetPoems') || '[]');
+                poems.push(poemData);
+                localStorage.setItem('reetPoems', JSON.stringify(poems));
+            }
+            
+            function loadPoems() {
+                const poems = JSON.parse(localStorage.getItem('reetPoems') || '[]');
+                if (poems.length === 0) {
+                    poemsList.innerHTML = '<div class="no-poems">No poems submitted yet. Be the first to share your poetry!</div>';
+                } else {
+                    poemsList.innerHTML = '';
+                    poems.forEach(poem => displayPoem(poem));
+                }
+            }
+            
+            function displayPoem(poemData) {
+                const poemElement = document.createElement('article');
+                poemElement.className = 'poem-card';
+                poemElement.setAttribute('data-theme', poemData.theme);
+                
+                // Format poem body with line breaks
+                const formattedBody = poemData.body.split('\n').map(line => `<p>${line}</p>`).join('');
+                
+                poemElement.innerHTML = `
+                    <h3 class="poem-title">${poemData.title}</h3>
+                    <p class="poem-author">by ${poemData.author}</p>
+                    <div class="poem-content">
+                        ${formattedBody}
+                    </div>
+                    <div class="poem-theme">${poemData.theme.charAt(0).toUpperCase() + poemData.theme.slice(1)}</div>
+                    <small style="color: #7f8c8d; margin-top: 1rem; display: block;">Submitted on ${poemData.date}</small>
+                `;
+                
+                // Remove the "no poems" message if it exists
+                const noPoems = poemsList.querySelector('.no-poems');
+                if (noPoems) {
+                    noPoems.remove();
+                }
+                
+                poemsList.appendChild(poemElement);
+            }
+        });
+    </script>
+</body>
+</html> 
